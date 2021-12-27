@@ -6,7 +6,7 @@
 /*   By: abouvet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/15 08:28:26 by abouvet           #+#    #+#             */
-/*   Updated: 2021/07/15 19:34:44 by abouvet          ###   ########.fr       */
+/*   Updated: 2021/12/27 21:02:42 by abouvet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 {
 	int		i;
 	char	*copy;
-	int	k;
+	int		k;
 
 	i = 0;
 	while (*strs)
@@ -64,20 +64,16 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	while (strs[i])
 	{
 		if (*strs[i] != 32)
-			ft_strcat(&copy, &strs)
+			ft_strcat(&copy, &strs);
 		if (*strs[i] == 32)
-			ft_strcat(&copy, &sep)
+			ft_strcat(&copy, &sep);
 		i++;
 	}
 	return (copy);
 }
 
-#include <stdio.h>
-
-char *ft_strjoin(int size, char **strs, char *sep);
-
 int	main(int argc, char **argv)
 {
 	printf("./ex03/output___said___this___is___a___success :\n");
-	printf("%s\n",  ft_strjoin(argc, argv, "___"));
+	printf("%s\n", ft_strjoin(argc, argv, "___"));
 }

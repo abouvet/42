@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                              :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abouvet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/06 17:47:27 by abouvet           #+#    #+#             */
-/*   Updated: 2021/12/27 18:44:44 by abouvet          ###   ########.fr       */
+/*   Created: 2021/12/27 20:50:14 by abouvet           #+#    #+#             */
+/*   Updated: 2021/12/27 21:29:19 by abouvet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(char *str)
+int	ft_isalpha(int c)
 {
-	while (*str)
-	{
-		if (*str >= 32 && *str < 127)
-			str++;
-		else
-			return (0);
-	}
-	return (1);
+	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
+}
+
+int	ft_isdigit(int c)
+{
+	return (c >= '0' && c <= '9');
+}
+
+int	ft_isalnum(int c)
+{
+	return (ft_isalpha(c) || ft_isdigit(c));
 }
