@@ -1,40 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abouvet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/07 09:37:42 by abouvet           #+#    #+#             */
-/*   Updated: 2021/12/28 16:21:11 by abouvet          ###   ########.fr       */
+/*   Created: 2021/12/28 11:27:40 by abouvet           #+#    #+#             */
+/*   Updated: 2021/12/28 17:17:14 by abouvet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+#include<string.h>
+
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	int	i;
+	char	*a;
+	char	*b;
 
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
-
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
-{
-	unsigned int	i;
-
-	i = 0;
-	if (size == 0)
-		return (ft_strlen(src));
-	while (i < size - 1)
+	a = (char *)src;
+	b = (char *)dst;
+	while (n)
 	{
-		if (src[i])
-			dest[i] = src [i];
-		else
-			dest[i] = '\0';
-		i++;
+		*b = *a;
+		a++;
+		b++;
+		n--;
 	}
-	dest[i] = '\0';
-	return (ft_strlen(src));
+	return (dst);
 }

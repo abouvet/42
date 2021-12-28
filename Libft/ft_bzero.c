@@ -1,40 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abouvet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/07 09:37:42 by abouvet           #+#    #+#             */
-/*   Updated: 2021/12/28 16:21:11 by abouvet          ###   ########.fr       */
+/*   Created: 2021/12/28 11:28:00 by abouvet           #+#    #+#             */
+/*   Updated: 2021/12/28 17:18:37 by abouvet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+#include<string.h>
+
+void	ft_bzero(void *s, size_t n)
 {
-	int	i;
+	char	*index;
+	int		c;
 
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
-
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
-{
-	unsigned int	i;
-
-	i = 0;
-	if (size == 0)
-		return (ft_strlen(src));
-	while (i < size - 1)
+	c = 0;
+	index = s;
+	if (n == 0)
+		return ;
+	while (n)
 	{
-		if (src[i])
-			dest[i] = src [i];
-		else
-			dest[i] = '\0';
-		i++;
+		*index = c;
+		index++;
+		n--;
 	}
-	dest[i] = '\0';
-	return (ft_strlen(src));
+	return ;
 }

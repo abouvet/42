@@ -6,20 +6,14 @@
 /*   By: abouvet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/06 19:13:31 by abouvet           #+#    #+#             */
-/*   Updated: 2021/12/27 18:46:52 by abouvet          ###   ########.fr       */
+/*   Updated: 2021/12/28 19:23:29 by abouvet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_tolower(char *str)
+int	ft_tolower(int c)
 {
-	int	i;
-
-	i = 0;
-	while (str[i])
-	{
-		if (str[i] >= 65 && 90 >= str[i])
-			str[i] = str[i] + 32;
-		i++;
-	}
-	return (str);
+	if (c >= 65 && c <= 90)
+		return (c + 32);
+	else
+		return (c);
 }

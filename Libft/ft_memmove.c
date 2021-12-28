@@ -1,40 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abouvet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/07 09:37:42 by abouvet           #+#    #+#             */
-/*   Updated: 2021/12/28 16:21:11 by abouvet          ###   ########.fr       */
+/*   Created: 2021/12/28 13:38:47 by abouvet           #+#    #+#             */
+/*   Updated: 2021/12/28 18:25:48 by abouvet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
-{
-	int	i;
+#include<string.h>
 
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
+void	*ft_memcpy(void *dst, const void *src, size_t n)
+{
+	char	*a;
+	char	*b;
+
+	a = (char *)src;
+	b = (char *)dst;
+	while (n)
+	{
+		*b = *a;
+		a++;
+		b++;
+		n--;
+	}
+	return (dst);
 }
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned int	i;
+	char	*a;
+	char	*b;
 
-	i = 0;
-	if (size == 0)
-		return (ft_strlen(src));
-	while (i < size - 1)
+	a = (char *)src;
+	b = (char *)dst;
+	if (b > a)
 	{
-		if (src[i])
-			dest[i] = src [i];
-		else
-			dest[i] = '\0';
-		i++;
+		while (len--)
+			b[len] = a[len];
 	}
-	dest[i] = '\0';
-	return (ft_strlen(src));
+	else
+		ft_memcpy(b, a, len);
+	return (dst);
 }

@@ -6,20 +6,14 @@
 /*   By: abouvet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/06 18:33:07 by abouvet           #+#    #+#             */
-/*   Updated: 2021/12/27 18:47:22 by abouvet          ###   ########.fr       */
+/*   Updated: 2021/12/28 19:23:13 by abouvet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_toupper(char *str)
+int	ft_toupper(int c)
 {
-	int	i;
-
-	i = 0;
-	while (str[i])
-	{
-		if (str[i] >= 97 && str[i] <= 122)
-			str[i] = str[i] - 32;
-		i++;
-	}
-	return (str);
+	if (c >= 97 && c <= 122)
+		return (c - 32);
+	else
+		return (c);
 }

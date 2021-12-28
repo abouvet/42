@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abouvet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/07 09:37:42 by abouvet           #+#    #+#             */
-/*   Updated: 2021/12/28 16:21:11 by abouvet          ###   ########.fr       */
+/*   Created: 2021/12/28 19:31:24 by abouvet           #+#    #+#             */
+/*   Updated: 2021/12/28 20:01:57 by abouvet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,21 +20,7 @@ int	ft_strlen(char *str)
 	return (i);
 }
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
-	unsigned int	i;
 
-	i = 0;
-	if (size == 0)
-		return (ft_strlen(src));
-	while (i < size - 1)
-	{
-		if (src[i])
-			dest[i] = src [i];
-		else
-			dest[i] = '\0';
-		i++;
-	}
-	dest[i] = '\0';
-	return (ft_strlen(src));
 }
