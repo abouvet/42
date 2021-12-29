@@ -1,30 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abouvet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/29 12:28:22 by abouvet           #+#    #+#             */
-/*   Updated: 2021/12/29 17:29:32 by abouvet          ###   ########.fr       */
+/*   Created: 2021/12/29 23:07:57 by abouvet           #+#    #+#             */
+/*   Updated: 2021/12/29 23:24:02 by abouvet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include"libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+void	*calloc(size_t count, size_t size)
 {
-	int		i;
-	char	*a;
 
-	i = 0;
-	a = ((char *)s);
-	while (n > 0)
-	{
-		if (a[i] == (char)c)
-			return ((char *)&a[i]);
-		i++;
-		n--;
-	}
-	return (NULL);
 }

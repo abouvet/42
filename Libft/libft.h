@@ -6,7 +6,7 @@
 /*   By: abouvet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/28 17:57:15 by abouvet           #+#    #+#             */
-/*   Updated: 2021/12/29 12:23:17 by abouvet          ###   ########.fr       */
+/*   Updated: 2021/12/29 23:06:57 by abouvet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,7 @@ char				*ft_strdup(const char *s);
 unsigned int		ft_strlcat(char *dest, char *src, unsigned int size);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
+void				*ft_memchr(const void *s, int c, size_t n);
+int					ft_memcmp(const void *s1, const void *s2, size_t n);
+char				*ft_strnstr(const char *s1, const char *s2, size_t len);
 #endif
