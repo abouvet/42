@@ -6,7 +6,7 @@
 #    By: abouvet <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/28 16:21:21 by abouvet           #+#    #+#              #
-#    Updated: 2021/12/29 19:05:55 by abouvet          ###   ########.fr        #
+#    Updated: 2021/12/30 15:16:56 by abouvet          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,6 +32,10 @@ SRC = ft_isalpha.c \
 		ft_memchr.c \
 		ft_memcmp.c \
 		ft_strnstr.c \
+		ft_calloc.c \
+		ft_substr.c \
+		ft_strtrim.c \
+		ft_itoa.c \
 
 BONUSSRCS	=	ft_lstnew.c \
 				ft_lstadd_front.c \
