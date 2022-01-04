@@ -6,74 +6,23 @@
 /*   By: abouvet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/15 08:28:26 by abouvet           #+#    #+#             */
-/*   Updated: 2021/12/27 21:02:42 by abouvet          ###   ########.fr       */
+/*   Updated: 2022/01/04 18:16:45 by abouvet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdlib.h>
+#include"libft.h"
 
-int	ft_strlen(char *str)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int	i;
+	char	*stck;
 
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
+	if (!s1 || !s2)
+		return (NULL);
+	stck = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (!stck)
+		return (NULL);
+	ft_strlcpy(stck, s1, ft_strlen(s1) + 1);
+	ft_strlcpy(&stck[ft_strlen(s1)], s2, ft_strlen(s2) + 1);
+	return (stck);
 }
 
-char	*ft_strcat(char *dest, char *src)
-{
-	int	i;
-	int	j;
-
-	i = 0;
-	j = 0;
-	while (dest[i])
-		i++;
-	while (src[j])
-	{
-		dest[i] = src[j];
-		j++;
-		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
-}
-
-char	*ft_strjoin(int size, char **strs, char *sep)
-{
-	int		i;
-	char	*copy;
-	int		k;
-
-	i = 0;
-	while (*strs)
-	{
-		k += ft_strlen(strs[i]);
-		i++;
-	}
-	copy = malloc(sizeof(copy) * (i + ft_strlen(sep) * size - 1));
-	if (size == 0)
-	{
-		*copy = '1';
-		return (copy);
-		free (copy);
-	}
-	i = 0;
-	while (strs[i])
-	{
-		if (*strs[i] != 32)
-			ft_strcat(&copy, &strs);
-		if (*strs[i] == 32)
-			ft_strcat(&copy, &sep);
-		i++;
-	}
-	return (copy);
-}
-
-int	main(int argc, char **argv)
-{
-	printf("./ex03/output___said___this___is___a___success :\n");
-	printf("%s\n", ft_strjoin(argc, argv, "___"));
-}

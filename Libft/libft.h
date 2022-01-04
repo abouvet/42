@@ -6,7 +6,7 @@
 /*   By: abouvet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/28 17:57:15 by abouvet           #+#    #+#             */
-/*   Updated: 2022/01/03 16:28:28 by abouvet          ###   ########.fr       */
+/*   Updated: 2022/01/04 18:21:27 by abouvet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,4 +44,7 @@ void				*ft_calloc(size_t count, size_t size);
 char				*ft_substr(char const *s, unsigned int start, size_t len);
 char				*ft_strtrim(char const *s1, char const *set);
 char				*ft_itoa(int n);
+char				**ft_split(const char *str, char charset);
+char				*ft_strjoin(char const *s1, char const *s2);
+char				*ft_strdup(const char *src);
 #endif
