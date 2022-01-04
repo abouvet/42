@@ -6,7 +6,7 @@
 /*   By: abouvet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/30 15:16:15 by abouvet           #+#    #+#             */
-/*   Updated: 2022/01/03 22:30:13 by abouvet          ###   ########.fr       */
+/*   Updated: 2022/01/04 01:07:56 by abouvet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_count(int n)
 		n /= 10;
 		i++;
 	}
-	return i;
+	return (i);
 }
 
 char	*ft_make(int len, char *tmp, int n)
@@ -52,7 +52,7 @@ char	*ft_make(int len, char *tmp, int n)
 	return (tmp);
 }
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	int		len;
 	char	*tmp;
@@ -63,11 +63,3 @@ char *ft_itoa(int n)
 		return (NULL);
 	return (ft_make(len, tmp, n));
 }
- 
-/*
-#include<stdio.h>
-int	main()
-{
-	printf("FT_ITOA: %s %d", ft_itoa(-799), ft_count(-799));
-	return (0);
-}*/
