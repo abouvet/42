@@ -1,27 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abouvet <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: abouvet <abouvet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/15 08:28:26 by abouvet           #+#    #+#             */
-/*   Updated: 2022/01/05 13:39:48 by abouvet          ###   ########.fr       */
+/*   Created: 2022/01/05 12:25:42 by abouvet           #+#    #+#             */
+/*   Updated: 2022/01/05 13:39:14 by abouvet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char	*stck;
+	unsigned int		i;
+	int					len;
+	char				*stck;
 
-	if (!s1 || !s2)
+	if (!s || !f)
 		return (NULL);
-	stck = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	i = 0;
+	len = ft_strlen(s);
+	stck = malloc(sizeof(char) * (len + 1));
 	if (!stck)
 		return (NULL);
-	ft_strlcpy(stck, s1, ft_strlen(s1) + 1);
-	ft_strlcpy(&stck[ft_strlen(s1)], s2, ft_strlen(s2) + 1);
+	while (i < size)
+	{
+		stck[i] = f(i, s[i]);
+		i++;
+	}
+	s[i] = '\0';
 	return (stck);
 }

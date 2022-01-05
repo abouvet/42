@@ -6,7 +6,7 @@
 #    By: abouvet <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/28 16:21:21 by abouvet           #+#    #+#              #
-#    Updated: 2022/01/04 18:19:13 by abouvet          ###   ########.fr        #
+#    Updated: 2022/01/05 12:47:50 by abouvet          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,6 +39,7 @@ SRC = ft_isalpha.c \
 		ft_split.c \
 		ft_strjoin.c \
 		ft_strdup.c \
+		ft_striteri.c \
 
 BONUSSRCS	=	ft_lstnew.c \
 				ft_lstadd_front.c \
@@ -49,6 +50,7 @@ BONUSSRCS	=	ft_lstnew.c \
 				ft_lstclear.c \
 				ft_lstiter.c \
 				ft_lstmap.c \
+				ft_strmapi.c \
 
 CC = gcc
 

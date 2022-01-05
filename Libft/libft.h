@@ -6,7 +6,7 @@
 /*   By: abouvet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/28 17:57:15 by abouvet           #+#    #+#             */
-/*   Updated: 2022/01/04 18:21:27 by abouvet          ###   ########.fr       */
+/*   Updated: 2022/01/05 12:47:21 by abouvet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,4 +47,6 @@ char				*ft_itoa(int n);
 char				**ft_split(const char *str, char charset);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strdup(const char *src);
+char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void				ft_striteri(char *s, void (*f)(unsigned int, char*));
 #endif
