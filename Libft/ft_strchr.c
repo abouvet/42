@@ -6,19 +6,19 @@
 /*   By: abouvet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/29 10:49:57 by abouvet           #+#    #+#             */
-/*   Updated: 2021/12/29 11:23:36 by abouvet          ###   ########.fr       */
+/*   Updated: 2022/01/07 10:11:32 by abouvet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<string.h>
+#include"libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s != '\0' + 1)
+	while (*s != (char)c)
 	{
-		if (*s == (char)c)
-			return ((char *)s);
+		if (!*s)
+			return (NULL);
 		s++;
 	}
-	return (NULL);
+	return ((char *)s);
 }

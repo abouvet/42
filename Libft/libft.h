@@ -6,7 +6,7 @@
 /*   By: abouvet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/28 17:57:15 by abouvet           #+#    #+#             */
-/*   Updated: 2022/01/06 21:50:58 by abouvet          ###   ########.fr       */
+/*   Updated: 2022/01/07 10:30:46 by abouvet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int					ft_tolower(int c);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 int					ft_atoi(const char *str);
 char				*ft_strdup(const char *s);
-size_t				ft_strlcat(char *dest, const char *src, unsigned int size);
+size_t				ft_strlcat(char *dest, const char *src, size_t size);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
 void				*ft_memchr(const void *s, int c, size_t n);
