@@ -6,21 +6,12 @@
 /*   By: abouvet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/27 20:50:14 by abouvet           #+#    #+#             */
-/*   Updated: 2021/12/27 21:29:19 by abouvet          ###   ########.fr       */
+/*   Updated: 2022/01/07 19:12:54 by abouvet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
-{
-	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
-}
-
-int	ft_isdigit(int c)
-{
-	return (c >= '0' && c <= '9');
-}
-
 int	ft_isalnum(int c)
 {
-	return (ft_isalpha(c) || ft_isdigit(c));
+	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z') || \
+	(c >= '0' && c <= '9'));
 }
